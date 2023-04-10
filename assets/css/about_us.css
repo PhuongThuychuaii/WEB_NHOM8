@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+/* RESET CSS */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-transform: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Garamond', sans-serif;
+  transition: ease-in-out 0.3s;
+  text-transform: capitalize;
+}
+/* KET THUC RESET CSS */
+
+
+/* HEADER  */
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 1rem 1.2rem;
+  color: #D08D94;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 999;
+}
+
+header .logo{
+  width: 100px;
+}
+header .navbar a{
+  margin: 0 1.2rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+header .navbar a:hover{
+  background-color: #D08D94;
+  color: #fff;
+}
+
+header .icons a,
+header .icons div{
+  background-color: #eee;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+header .icons a:hover,
+header .icons div:hover{
+  background-color: #D08D94;
+  color: #fff;
+}
+header #menu-btn{
+  display: none;
+}
+
+/* KET THUC HEADER */
+
+
+/* RESPONSIVE HEADER */
+
+@media only screen and (max-width: 991px) {
+  
+}
+@media only screen and (max-width: 768px) {
+  header #menu-btn{
+    display: inline-block;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 0.2rem solid #D08D94;
+    border-bottom: 0.2rem solid #D08D94;
+    padding: 0.2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  header .navbar a{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  
+}
+
+/* Kết thúc responsive header */
+
+
+
+/* MAIN */
+
+main {
+  height:fit-content;
+  font-family: 'Garamond',sans-serif;
+}
+.banner {
+    position: relative;
+    width: auto;
+    height: 250px;
+    object-fit: fill;
+    color: black;
+}
+.banner img{
+    background-image: url(/assets/images/store.jpg);
+    height: 250px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 60%;
+}
+.banner-content p{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    margin: auto;
+    line-height: 2.5;
+    gap: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+}
+h1{
+    position: absolute;
+    text-align: center;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+h4{
+    text-align: center;
+    color: #D08D94;
+    font-weight: bold;
+    font-size: xx-large;
+    top: 0%;
+}
+.abcontent {
+    text-transform: none;
+    text-align: justify;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+.staff_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+.member_info {
+    width: 200px;
+    padding: 0.5rem;
+}
+.clear{
+    clear: both;
+}
+.container {
+    width: 100%;
+    border: 1px solid white;
+    padding: 10px;
+}
+#sidebar{
+    width: 300px;
+    height: 150px;
+    float: left;
+    font-size: 300%;
+}
+#post{
+    width: 800px;
+    height: 150px;
+    float: right;
+}
+.members{
+    justify-content: space-between;
+    display: flex;
+    gap: 2rem;
+}
+.member{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #B66367;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.member img{
+    height: 200px;
+    width: fit-content;
+}
+.staff-name .position{
+    align-items: center;
+}
+/* KẾt thúc css MAIN */
+
+/* RESPONSIVE MAIN */
+
+@media only screen and (max-width: 768px){
+    .members{
+        flex-wrap: wrap;
+    }
+    .clear{
+        clear: none;
+    }
+    #post{
+        width: 750px;
+        height: 200px;
+        font-size: larger;
+        text-align: justify;
+    }
+    #sidebar{ 
+        width: 768px;
+        height: 80px;
+        text-align: center;
+        font-size: 300%;
+    }
+}
+@media only screen and (max-width: 412px){
+  #sidebar{
+    font-size: 200%;
+    float: none;
+    width: 400px;
+    height: 50pxS;
+  }
+  #post{
+    width: 400px;
+    height: 350px;
+    font-size: 100%;
+    text-align: justify;
+  }
+}
+
+/* END RESPONSIVE MAIN */
+
+/* CSS FOOTER  */
+
+footer {
+  background-color: #B66367;
+  color: #fff;
+  height: fit-content;
+  padding: 2rem;
+
+}
+.footer_content{
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  padding: 1rem;
+  column-gap: 1rem;
+}
+.social_media a{
+  font-size: 1.2rem;
+  margin: 1rem 0.8rem 0 0;
+}
+
+.copyright{
+  border-top: 1px solid ;
+  background-color: #B66367;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* RESPONSIVE FOOTER */
+
+@media only screen and (max-width: 991px) {
+  
+}
+@media only screen and (max-width: 768px) {
+ .footer_content{
+  grid-template-columns: 1fr;
+  line-height: 2;
+ }
+
+}
+
+@media only screen and (max-width: 450px) {
+  
+}
+
+/* Kết thúc responsive FOOTER */
